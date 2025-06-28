@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu Nhà Hàng Xanh Dương</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #e6f0ff;
+      color: #003366;
+    }
+    h1 {
+      text-align: center;
+      color: #0059b3;
+      margin-bottom: 30px;
+    }
+    .menu {
+      max-width: 700px;
+      margin: 0 auto 40px;
+      background: #cce0ff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0, 89, 179, 0.3);
+    }
+    .dish {
+      border-bottom: 1px solid #99bbff;
+      padding: 12px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .dish:last-child {
+      border-bottom: none;
+    }
+    .dish-info {
+      max-width: 70%;
+    }
+    .dish-name {
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-bottom: 5px;
+    }
+    .dish-desc {
+      font-style: italic;
+      font-size: 0.9em;
+      color: #004080;
+    }
+    .dish-price {
+      font-weight: bold;
+      font-size: 1.1em;
+      color: #003366;
+      white-space: nowrap;
+    }
+    .qr-code {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .qr-code img {
+      border: 5px solid #0059b3;
+      border-radius: 15px;
+    }
+    form {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #cce0ff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 89, 179, 0.3);
+    }
+    form h2 {
+      text-align: center;
+      color: #0059b3;
+      margin-bottom: 20px;
+    }
+    form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #003366;
+    }
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #99bbff;
+      border-radius: 6px;
+      font-size: 1em;
+      box-sizing: border-box;
+    }
+    form button {
+      background: #0059b3;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 1.1em;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+    form button:hover {
+      background: #003d7a;
+    }
+    #form-message {
+      text-align: center;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #0059b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Menu Nhà Hàng Xanh Dương</h1>
+
+  <div class="menu">
+    <div class="dish">
+      <div class="dish-info">
+        <div class="dish-name">Phở Bò</div>
+        <div class="dish-desc">Nước dùng đậm đà, bánh phở mềm, thịt bò tươi ngon.</div>
+      </div>
+      <div class="dish-price">60,000 VND</div>
+    </div>
+    <div class="dish">
+      <div class="dish-info">
+        <div class="dish-name">Bún Chả</div>
+        <div class="dish-desc">Bún chả Hà Nội với nước mắm pha chuẩn vị.</div>
+      </div>
+      <div class="dish-price">55,000 VND</div>
+    </div>
+    <div class="dish">
+      <div class="dish-info">
+        <div class="dish-name">Cơm Tấm Sườn Nướng</div>
+        <div class="dish-desc">Sườn nướng thơm phức ăn cùng cơm tấm.</div>
+      </div>
+      <div class="dish-price">70,000 VND</div>
+    </div>
+    <div class="dish">
+      <div class="dish-info">
+        <div class="dish-name">Gỏi Cuốn</div>
+        <div class="dish-desc">Cuốn tươi ngon với rau sống và tôm thịt.</div>
+      </div>
+      <div class="dish-price">40,000 VND</div>
+    </div>
+    <div class="dish">
+      <div class="dish-info">
+        <div class="dish-name">Bánh Mì Thịt</div>
+        <div class="dish-desc">Bánh mì nóng giòn với pate và thịt nguội.</div>
+      </div>
+      <div class="dish-price">35,000 VND</div>
+    </div>
+    <div class="dish">
+      <div class="dish-info">
+        <div class="dish-name">Cháo Gà</div>
+        <div class="dish-desc">Cháo trắng mịn, gà xé thơm ngon.</div>
+      </div>
+      <div class="dish-price">50,000 VND</div>
+    </div>
+    <div class="dish">
+      <div class="dish-info">
+        <div class="dish-name">Mì Xào Hải Sản</div>
+        <div class="dish-desc">Mì xào tôm, mực và rau củ tươi.</div>
+      </div>
+      <div class="dish-price">65,000 VND</div>
+    </div>
+    <div class="dish">
+      <div class="dish-info">
+        <div class="dish-name">Cà Phê Sữa Đá</div>
+        <div class="dish-desc">Cà phê đậm đà hòa quyện với sữa đặc.</div>
+      </div>
+      <div class="dish-price">25,000 VND</div>
+    </div>
+    <div class="dish">
+      <div class="dish-info">
+        <div class="dish-name">Trà Chanh</div>
+        <div class="dish-desc">Trà chanh tươi mát, giải khát hiệu quả.</div>
+      </div>
+      <div class="dish-price">20,000 VND</div>
+    </div>
+    <div class="dish">
+      <div class="dish-info">
+        <div class="dish-name">Sinh Tố Bơ</div>
+        <div class="dish-desc">Sinh tố bơ thơm ngon, béo mịn.</div>
+      </div>
+      <div class="dish-price">30,000 VND</div>
+    </div>
+  </div>
+
+  <div class="qr-code">
+    <h2>Quét mã QR để xem menu trên điện thoại</h2>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://your-menu-link.com" alt="QR Code Menu" />
+  </div>
+
+  <form id="order-form">
+    <h2>Đặt món</h2>
+    <label for="name">Họ tên:</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="dish">Chọn món:</label>
+    <select id="dish" name="dish" required>
+      <option value="" disabled selected>-- Chọn món --</option>
+      <option>Phở Bò</option>
+      <option>Bún Chả</option>
+      <option>Cơm Tấm Sườn Nướng</option>
+      <option>Gỏi Cuốn</option>
+      <option>Bánh Mì Thịt</option>
+      <option>Cháo Gà</option>
+      <option>Mì Xào Hải Sản</option>
+      <option>Cà Phê Sữa Đá</option>
+      <option>Trà Chanh</option>
+      <option>Sinh Tố Bơ</option>
+    </select>
+
+    <label for="quantity">Số lượng:</label>
+    <input type="number" id="quantity" name="quantity" min="1" value="1" required />
+
+    <label for="contact">Số điện thoại / Email:</label>
+    <input type="text" id="contact" name="contact" required />
+
+    <button type="submit">Gửi đơn hàng</button>
+
+    <div id="form-message"></div>
+  </form>
+
+  <script>
+    document.getElementById('order-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const messageDiv = document.getElementById('form-message');
+      messageDiv.textContent = 'Cảm ơn bạn đã đặt món! Chúng tôi sẽ liên hệ lại sớm.';
+      this.reset();
+    });
+  </script>
+</body>
+</html>
